@@ -27,9 +27,12 @@ $config = [
     'default-sp' => [
         'saml:SP',
 
+        'privatekey' => 'saml-server.pem',
+        'certificate' => 'saml-server.crt',
+        
         // The entity ID of this SP.
         // Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.
-        'entityID' => null,
+        'entityID' => 'https://aoprototest-php3.azurewebsites.net',
 
         // The entity ID of the IdP this SP should contact.
         // Can be NULL/unset, in which case the user will be shown a list of available IdPs.
